@@ -45,3 +45,4 @@ class DupFile(object):
         df['estimated_library_dup_rate'] = (df['total_duplicate_fragments'] - df['total_flowcell_duplicates']) / (df['total_fragments'] - df['total_flowcell_duplicates'])
         df['subtile_dup_rate_stdev'] = (self.per_tile_stats['duplicate_count'] / (self.per_tile_stats['unique_count'] + self.per_tile_stats['duplicate_count'])).std(ddof=0)
         self.summary = pd.DataFrame(df).transpose()
+        self.per_tile_stats = self.per_tile_stats.reset_index()
