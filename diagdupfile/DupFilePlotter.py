@@ -11,7 +11,6 @@ class DupFilePlotter(object):
 
     def plot(self, dupfile_obj, filename):
         array_plot = dupfile_obj.per_tile_stats
-        print array_plot
         array_plot['side'] = array_plot['tile'].apply(lambda x: int(x/1000))
         array_plot['swath'] = array_plot['tile'].apply(lambda x: int(x % 1000 / 100))
         array_plot['tile'] = array_plot['tile'] % 100
