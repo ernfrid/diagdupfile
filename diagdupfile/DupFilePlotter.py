@@ -38,7 +38,6 @@ class DupFilePlotter(object):
 
         for row in range(len(sides)):
             for col in range(len(lanes)):
-                print flowcells[0],lanes[col],sides[row]
                 axes[row][col].get_xaxis().set_visible(False)
                 axes[row][col].get_yaxis().set_visible(False)
                 if row == 0:
