@@ -33,7 +33,7 @@ class DupFilePlotter(object):
 
         purples = LinearSegmentedColormap('PurplesDF', pcdict)
 
-        figure, axes = plt.subplots(len(sides), len(lanes), figsize=(11, 8.5), dpi=300)
+        figure, axes = plt.subplots(len(sides), len(lanes), figsize=(11, 8.5), dpi=300, squeeze=False)
         figure.suptitle("Per-tile duplication for flow cell " + flowcells[0])
 
         for row in range(len(sides)):
